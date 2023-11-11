@@ -1,0 +1,37 @@
+React Native
+npx create-expo-app MyNavApp
+cd MyNavApp
+если запускаем на устройстве: npm run start
+если запускаем в симуляторе: npm run ios или npm run android
+
+React Navigation
+npm install @react-navigation/native
+
+Native Stack
+npm install @react-navigation/native-stack
+
+BottomTabs
+npm install @react-navigation/bottom-tabs
+
+Drawer
+npm install @react-navigation/drawer
+npx expo install react-native-gesture-handler react-native-reanimated
+в App.js на самом самом верху:
+import 'react-native-gesture-handler';
+файл babel.config.js сделать таким:
+module.exports = function(api) {
+  api.cache(true);
+  return {
+    presets: ['babel-preset-expo'],
+    plugins: ['react-native-reanimated/plugin']
+  };
+};
+затем запустить
+npx expo start -c
+
+Material Bottom tabs
+npm install @react-navigation/material-bottom-tabs react-native-paper react-native-vector-icons
+
+Material Top Tabs
+npm install @react-navigation/material-top-tabs react-native-tab-view
+npx expo install react-native-pager-view
